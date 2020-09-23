@@ -1,5 +1,5 @@
 import React from 'react';
-import {SharedElement} from 'react-navigation-shared-element';
+import { SharedElement } from 'react-navigation-shared-element';
 import {
   StyleSheet,
   View,
@@ -9,9 +9,9 @@ import {
   Dimensions,
 } from 'react-native';
 import TouchableScale from 'react-native-touchable-scale';
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.main}>
       <View style={styles.headerBox}>
@@ -25,9 +25,19 @@ const Home = ({navigation}) => {
         onPress={() => navigation.navigate('Result')}>
         <SharedElement id="searchBoxId">
           <View style={styles.searchBox}>
-            <Text style={styles.searchPlaceHolder}>Find Your Bike</Text>
+            <Text style={styles.searchPlaceHolder}>Transition 1 - shared</Text>
           </View>
         </SharedElement>
+      </TouchableScale>
+      <TouchableScale
+        activeScale={0.9}
+        tension={50}
+        friction={7}
+        useNativeDriver
+        onPress={() => navigation.navigate('Result2')}>
+        <View style={styles.searchBox}>
+          <Text style={styles.searchPlaceHolder}>Transition 2 - animated</Text>
+        </View>
       </TouchableScale>
     </View>
   );

@@ -7,9 +7,9 @@ import {
   ScrollView,
   Button,
 } from 'react-native';
-import {SharedElement} from 'react-navigation-shared-element';
+import { SharedElement } from 'react-navigation-shared-element';
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const data = [
   {
@@ -722,7 +722,7 @@ const data = [
   },
 ];
 
-const Result = ({navigation}) => {
+const Result = ({ navigation }) => {
   return (
     <View style={styles.main}>
       <View style={styles.filterButton}>
@@ -732,7 +732,7 @@ const Result = ({navigation}) => {
       </View>
       <SharedElement id="searchBoxId">
         <View style={styles.searchBox}>
-          <Text style={styles.searchPlaceHolder}>Find Your Bike</Text>
+          <Text style={styles.searchPlaceHolder}>Shared animation</Text>
         </View>
       </SharedElement>
       <ScrollView>

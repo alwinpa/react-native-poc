@@ -1,13 +1,14 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {StyleSheet, View, Text, StatusBar} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
-import {CardStyleInterpolator} from '@react-navigation/stack';
+import { StyleSheet, View, Text, StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
+import { CardStyleInterpolator } from '@react-navigation/stack';
 import Home from './components/home';
 import Result from './components/result';
 import Filter from './components/filter';
-import {CardStyleInterpolators} from 'react-navigation-stack';
+import Result2 from './components/result2';
+import { CardStyleInterpolators } from 'react-navigation-stack';
 
 const Stack = createSharedElementStackNavigator();
 
@@ -16,7 +17,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="Home"
-        screenOptions={{headerShown: false}}>
+        screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen
           name="Result"
@@ -31,6 +32,7 @@ const App = () => {
           }}
         />
         <Stack.Screen name="Filter" component={Filter} />
+        <Stack.Screen name="Result2" component={Result2} />
       </Stack.Navigator>
     </NavigationContainer>
   );
